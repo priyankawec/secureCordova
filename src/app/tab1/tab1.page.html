@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     ionic Task
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- [fullscreen]="true" -->
+<!-- <ion-content >
+  <form [formGroup]="user_info" class="form">
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">DOB</ion-label>
+      <ion-input formControlName="dob" type="text" required></ion-input>
+    </ion-item>
+    <ion-radio-group lines="full">
+      <ion-list-header>
+        <ion-label>Gender</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio formControlName="gender" slot="start" value="male" checked></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio formControlName="gender" slot="start" value="female"></ion-radio>
+      </ion-item>
+    </ion-radio-group> -->
+
+    <!-- <ion-row>
+      <ion-col>
+        <ion-button type="submit" class="primary" expand="block" routerLink="/tab2">Submit</ion-button>
+      </ion-col>
+    </ion-row> -->
+
+  <!-- </form> -->
+  <!-- <br> -->
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+<!-- </ion-content> -->
+<ion-content>
+  <ion-list-header>
+    <ion-label>Add Your Photo</ion-label>
+  </ion-list-header>
+  <ion-item class="d-flex justify-content-center">
+    <ion-button (click)="click_Photo()">Camera</ion-button>
+    <ion-button (click)="from_gallery()">Choose Image</ion-button>
+  </ion-item>
+  <img style="width:auto; height:auto;" src="{{imgURL}}" >
+  <br>
+  <br>
+  <ion-item *ngIf="this.imgURL">
+    <ion-button (click)="removePhoto()">Remove Photo</ion-button>
+  </ion-item>
+</ion-content>

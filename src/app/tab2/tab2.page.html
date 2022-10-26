@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <ion-button (click)="chooseVideo()">video</ion-button>
+<video> <source [src]="vid" type="video/mp4"></video>
+<button class="btn btn-primary" (click)="playVideo()">play video</button>
+<ion-list>
+  <ion-item  tappable  text-wrap> -->
+    <!-- {{ file.name }} -->
+    <!-- <p>{{ file.size / 1000 / 1000 | number }} MB</p> -->
+  <!-- </ion-item> -->
+<!-- </ion-list> -->
+
+<ion-row>
+  <ion-col>
+    <ion-button ion-button full (click)="captureVideo()">Capture Video</ion-button>
+  </ion-col>
+</ion-row>
+
+<ion-list>
+  <ion-item *ngFor="let file of mediaFiles" tappable (click)="play(file)" text-wrap>
+    {{ file.name }}
+    <p>{{ file.size / 1000 / 1000 | number }} MB</p>
+  </ion-item>
+</ion-list>
+<video controls autoplay #myvideo>
+</video>
+  <app-explore-container name="Tab 2 page"></app-explore-container>
+</ion-content>
